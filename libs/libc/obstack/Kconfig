@@ -1,0 +1,14 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config OBSTACK
+	bool "Obstack"
+	default n
+	---help---
+		An obstack is a pool of memory containing a stack of objects. You can
+		create any number of separate obstacks, and then allocate objects in
+		specified obstacks. Within each obstack, the last object allocated must
+		always be the first one freed, but distinct obstacks are independent of
+		each other.
